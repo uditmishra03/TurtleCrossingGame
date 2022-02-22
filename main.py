@@ -17,8 +17,7 @@ screen.onkey(player.move_up, "Up")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
-    screen.update()
+
     # detect collision of player with car
     for each_car in car_manager.all_cars:
         if player.distance(each_car) < 28.28:
@@ -34,5 +33,8 @@ while game_is_on:
 
     car_manager.generate_cars()
     car_manager.move_car()
+
+    time.sleep(0.1)
+    screen.update()
 
 screen.exitonclick()

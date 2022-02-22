@@ -30,4 +30,5 @@ class Player(Turtle):
 
     def collision_detected(self):
         self.goto(0, 0)
+        self.hideturtle()
         self.write("Uh-Oh!Crashed.GAME OVER.", align="center", font=FONT)
