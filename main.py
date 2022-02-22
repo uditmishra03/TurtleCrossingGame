@@ -27,9 +27,8 @@ while game_is_on:
     # detect if turtle has reached the finish line, if Yes, Level up and send back to start line.
     if player.is_at_finish_line():
         player.back_to_start()
-        car_manager.level_up()
-        scoreboard.level += 1
-        scoreboard.update_score()
+        car_manager.increase_speed_on_level_up()
+        scoreboard.level_up()
 
     car_manager.generate_cars()
     car_manager.move_car()
